@@ -4,12 +4,12 @@ languages:
 - java
 products:
 - azure
-services: Appservice
-platforms: java
-author: yaohaizh
+extensions:
+- services: Appservice
+- platforms: java
 ---
 
-## Getting Started with Appservice - Manage Web App With Traffic Manager - in Java ##
+# Getting Started with Appservice - Manage Web App With Traffic Manager - in Java #
 
 
   Azure App Service sample for managing web apps.
