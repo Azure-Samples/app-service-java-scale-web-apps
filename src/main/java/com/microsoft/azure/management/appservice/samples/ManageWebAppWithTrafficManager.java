@@ -103,8 +103,8 @@ public final class ManageWebAppWithTrafficManager {
             //============================================================
             // Create a self-singed SSL certificate
 
-            pfxPath = ManageWebAppWithTrafficManager.class.getResource("/").getPath() + app2Name + "." + domainName + ".pfx";
-            String cerPath = ManageWebAppWithTrafficManager.class.getResource("/").getPath() + app2Name + "." + domainName + ".cer";
+            pfxPath = ManageWebAppWithTrafficManager.class.getResource("/").getPath() + "webapp_" + ManageWebAppWithTrafficManager.class.getSimpleName().toLowerCase() + ".pfx";
+            String cerPath = ManageWebAppWithTrafficManager.class.getResource("/").getPath() + "webapp_" + ManageWebAppWithTrafficManager.class.getSimpleName().toLowerCase() + ".cer";
 
             System.out.println("Creating a self-signed certificate " + pfxPath + "...");
 
@@ -274,7 +274,7 @@ public final class ManageWebAppWithTrafficManager {
         return azure.appServices().appServicePlans().define(name)
                 .withRegion(region)
                 .withExistingResourceGroup(RG_NAME)
-                .withPricingTier(PricingTier.BASIC_B1)
+                .withPricingTier(PricingTier.STANDARD_S1)
                 .withOperatingSystem(OperatingSystem.WINDOWS)
                 .create();
     }
