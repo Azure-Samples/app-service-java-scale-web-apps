@@ -5,8 +5,8 @@ languages:
 products:
 - azure
 extensions:
-  services: Appservice
-  platforms: java
+- services: Appservice
+- platforms: java
 ---
 
 # Getting Started with Appservice - Manage Web App With Traffic Manager - in Java #
